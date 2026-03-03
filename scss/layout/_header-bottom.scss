@@ -1,0 +1,101 @@
+@use "../global" as g;
+
+/*!
+layout > header-bottom
+------------------------------
+*/
+.l-header-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24rem 16rem;
+  background-color: var(--color-white);
+  box-shadow: 0px 7px 30px 0px rgba(31, 31, 31, 0.08);
+
+  @include g.mq() {
+    display: none;
+  }
+}
+
+.l-header-bottom-content {
+}
+
+.l-header-bottom-title {
+  text-align: center;
+  line-height: 1;
+}
+
+.l-header-bottom-cta-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16rem;
+}
+
+.l-header-bottom-tel-cta {
+}
+
+.l-header-bottom-tel-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+}
+
+.l-header-bottom-tel-number {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  font-size: 20rem;
+  line-height: 1;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20rem;
+    aspect-ratio: 1/1;
+    mask-image: url(../img/iphone-icon.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--color-font-base);
+  }
+}
+
+.l-header-bottom-tel-reception-hours {
+  font-size: 12rem;
+  line-height: 1;
+}
+
+.l-header-bottom-mail-cta {
+}
+
+.l-header-bottom-mail-link {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  line-height: 1;
+  background-color: var(--color-primary);
+  padding: 0 28rem;
+  height: 48rem;
+  border-radius: 6rem;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20rem;
+    aspect-ratio: 1/1;
+    mask-image: url(../img/mail-icon.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--color-white);
+  }
+}
+
+.l-header-bottom-mail-text {
+  color: var(--color-white);
+  text-transform: capitalize;
+  font-family: var(--font-family-en)
+}

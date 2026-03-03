@@ -1,0 +1,82 @@
+@use "../global" as g;
+
+/*!
+component > title
+------------------------------
+*/
+
+.c-title-ja {
+  display: inline-flex;
+  gap: 10rem;
+  align-items: center;
+  line-height: 1;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 12rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+  }
+}
+
+.c-title-en {
+  line-height: 1;
+  font-family: var(--font-family-en);
+  font-size: 64rem;
+  font-weight: 400;
+  text-transform: capitalize;
+
+  @include g.mq() {
+    font-size: 80rem;
+  }
+}
+
+.c-title-s {
+  font-size: 28rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10rem;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 12rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+  }
+
+  @include g.mq() {
+    font-size: 32rem;
+  }
+}
+
+.c-title-kv-ja {
+  display: inline-flex;
+  gap: 10rem;
+  align-items: center;
+  line-height: 1;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 12rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+  }
+}
+
+.c-title-kv-en {
+  line-height: 1;
+  font-family: var(--font-family-en);
+  font-size: 80rem;
+  font-weight: 400;
+  text-transform: capitalize;
+
+  @include g.mq() {
+    font-size: 88rem;
+  }
+}

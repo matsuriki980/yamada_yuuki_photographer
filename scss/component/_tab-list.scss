@@ -1,0 +1,38 @@
+@use "../global" as g;
+
+/*!
+component > tab-list
+------------------------------
+*/
+.c-tab-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24rem;
+
+  @include g.mq() {
+    gap: 40rem;
+  }
+}
+
+.c-tab-item {
+  font-size: 18rem;
+  line-height: 1;
+
+  &--all {
+    font-size: 20rem;
+
+    .c-tab-link {
+      text-transform: capitalize;
+    }
+  }
+}
+
+.c-tab-link {
+  color: var(--color-font-light);
+}
+
+.c-tab-link.active {
+  color: var(--color-primary);
+}

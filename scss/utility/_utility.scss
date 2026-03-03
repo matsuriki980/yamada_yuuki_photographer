@@ -1,0 +1,55 @@
+@use "../global" as g;
+
+/*!
+utility > utility
+------------------------------
+*/
+
+/* 非表示 */
+.u-visually-hidden {
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  padding: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  margin: -1px !important;
+}
+
+.u-pt {
+  padding-bottom: 120rem !important;
+}
+.u-ptb {
+  padding-block: 120rem !important;
+}
+
+.u-link-hover {
+  @include g.mq() {
+    transition: opacity 0.3s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+.u-text-hover {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s;
+
+  @include g.mq() {
+    @media (any-hover: hover) {
+      &:hover {
+        background-size: 100% 1px;
+      }
+    }
+  }
+}

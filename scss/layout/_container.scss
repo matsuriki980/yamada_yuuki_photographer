@@ -1,0 +1,22 @@
+@use "../global" as g;
+
+/*!
+layout > container
+------------------------------
+*/
+
+.l-container-s {
+  padding-inline: 16rem;
+
+  @include g.mq() {
+    padding-inline: 243rem;
+  }
+}
+
+.l-container {
+  padding-inline: 16rem;
+
+  @include g.mq() {
+    padding-inline: 83rem;
+  }
+}
