@@ -28,7 +28,7 @@ body {
   color: var(--color-font-base); 
   font-weight: 500;
 
-  @include g.mq() {
-    font-size: 18rem;
-  }
+ // @include g.mq() {
+ //   font-size: 18rem;
+ // }
 }

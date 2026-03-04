@@ -1,0 +1,27 @@
+@use "../global" as g;
+
+/*!
+layout > section-statement
+------------------------------
+*/
+
+.l-section-statement-title {
+  text-align: center;
+}
+
+.l-section-statement-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24rem;
+  margin-top: 36rem;
+}
+
+.l-section-statement-text {
+  font-size: 17rem;
+  line-height: 2;
+  text-align: center;
+
+  span {
+    display: block;
+  }
+}

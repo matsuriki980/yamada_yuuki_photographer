@@ -1,0 +1,118 @@
+@use "../global" as g;
+
+/*!
+layout > header
+------------------------------
+*/
+
+.l-contact-cta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36rem;
+
+  @include g.mq() {
+    grid-template-columns: 490rem 662rem;
+    align-items: center;
+  }
+}
+
+.l-container {
+}
+
+.l-contact-cta-content {
+}
+
+.l-contact-cta-text {
+  margin-top: 24rem;
+
+  span {
+    display: block;
+  }
+}
+
+.l-contact-cta-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24rem;
+
+  @include g.mq() {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.l-contact-cta-item {
+  background: var(--color-font-base);
+  padding: 32rem 24rem;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.l-contact-cta-title {
+  line-height: 1;
+}
+
+.l-contact-cta-tel-link {
+  display: block;
+  margin-top: 24rem;
+  text-align: center;
+}
+
+.l-contact-cta-tel-number {
+  font-size: 30rem;
+  font-family: var(--font-family-en);
+  line-height: 1;
+  display: inline-flex;
+  gap: 4rem;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 32rem;
+    aspect-ratio: 1/1;
+    mask-image: url(../img/iphone-icon.svg);
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    background: var(--color-white);
+  }
+}
+
+.l-contact-cta-reception {
+  line-height: 1;
+  font-weight: 400;
+  font-size: 14rem;
+}
+
+.l-contact-cta-mail-link {
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+  justify-content: center;
+  height: 64rem;
+  background: var(--color-primary);
+  border-radius: 6rem;
+  border: 1px solid var(--color-primary);
+  margin-top: 16rem;
+  transition:
+    background 0.3s,
+    border 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: transparent;
+      border: 1px solid var(--color-white);
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20rem;
+    aspect-ratio: 1/1;
+    mask-image: url(../img/mail-icon.svg);
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    background: var(--color-white);
+  }
+}

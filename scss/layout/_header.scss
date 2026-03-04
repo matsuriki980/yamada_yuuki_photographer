@@ -7,11 +7,12 @@ layout > header
 .l-header {
   padding: 16rem;
   background-color: var(--color-white);
-  box-shadow: 0px 7px 30px 0px rgba(31, 31, 31, 0.08);
+  box-shadow: 0px 7px 30px 0px rgba(31, 31, 31, 0.15);
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  z-index: var(--z-index-header);
   left: 0;
   top: 0;
   width: 100%;
@@ -45,7 +46,7 @@ layout > header
   }
 }
 
-.l-header-menu-nav {
+.l-header-menu-content {
   width: 312rem;
   margin-left: auto;
   padding: 80rem 16rem 64rem;
@@ -56,6 +57,9 @@ layout > header
     margin-left: 0;
     padding: 0;
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 40rem;
   }
 }
 
@@ -170,6 +174,15 @@ layout > header
   }
 }
 
+.l-header-menu-tel {
+  margin-top: 24rem;
+  text-align: center;
+
+  @include g.mq() {
+    margin-top: 0;
+  }
+}
+
 .tel-link {
   display: flex;
   flex-direction: column;
@@ -214,9 +227,11 @@ layout > header
 .reception-hours {
   font-size: 14rem;
   line-height: 1;
+  margin-top: 12rem;
 
   @include g.mq() {
     font-size: 12rem;
+    margin-top: 8rem;
   }
 }
 
