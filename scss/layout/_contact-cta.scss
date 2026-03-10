@@ -13,13 +13,9 @@ layout > header
   @include g.mq() {
     grid-template-columns: 490rem 662rem;
     align-items: center;
+    gap: 0;
+    justify-content: space-between;
   }
-}
-
-.l-container {
-}
-
-.l-contact-cta-content {
 }
 
 .l-contact-cta-text {

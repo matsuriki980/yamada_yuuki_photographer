@@ -1,0 +1,64 @@
+@use "../../global" as g;
+
+/*!
+page > works
+------------------------------
+*/
+.works-title-wrap {
+  text-align: center;
+}
+
+.works-list {
+  margin-top: 40rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64rem;
+
+  @include g.mq() {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.works-item-link {
+  @media (any-hover: hover) {
+    &:hover {
+      .works-item-img {
+        img {
+          scale: 1.1;
+        }
+      }
+    }
+  }
+}
+
+.works-item-img {
+  overflow: hidden;
+
+  img {
+    transition: scale 0.3s;
+  }
+}
+
+.works-item-title-wrap {
+  margin-top: 16rem;
+
+  @include g.mq() {
+    margin-top: 24rem;
+  }
+}
+
+.works-item-title-category {
+  line-height: 1;
+  font-size: 14rem;
+  color: var(--color-primary);
+
+  @include g.mq() {
+    font-size: 16rem;
+  }
+}
+
+.works-item-title {
+  line-height: 1.6;
+  font-size: 20rem;
+  margin-top: 4rem;
+}

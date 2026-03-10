@@ -1,0 +1,145 @@
+@use "../../global" as g;
+
+/*!
+page > service-flow
+------------------------------
+*/
+
+.service-flow-head {
+  text-align: center;
+}
+
+.service-flow-text {
+  span {
+    display: block;
+    vertical-align: middle;
+  }
+}
+
+.service-flow-text:nth-of-type(1) {
+  margin-top: 24rem;
+
+  @include g.mq() {
+    margin: 36rem 0 4rem;
+  }
+}
+
+.service-flow-text--second {
+  @include g.mq() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span:nth-of-type(2) {
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+.service-flow-text-number {
+  display: inline-block !important;
+  font-family: var(--font-family-en);
+  font-weight: 600;
+  font-size: 48rem;
+  color: var(--color-primary);
+  margin-inline: 8rem;
+  line-height: 1;
+
+  @include g.mq() {
+    line-height: 0.61; // テキスト2段目の横並びの上下ズレを調整
+  }
+}
+
+.service-flow-list {
+  margin-top: 64rem;
+
+  @include g.mq() {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-flow-item {
+  @include g.mq() {
+    display: grid;
+    grid-template-columns: 360rem 1fr;
+    grid-template-rows: auto 1fr;
+
+    img {
+      @include g.mq() {
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+    }
+  }
+
+  &:not(:last-of-type) {
+    // 最後の項目以外の疑似要素で矢印を作る
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-right: 20rem solid transparent;
+      border-left: 20rem solid transparent;
+      border-top: 35rem solid #1e5aa8;
+      border-bottom: 0;
+      margin: 20rem auto;
+
+      @include g.mq() {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        border-top: 16rem solid transparent;
+        border-bottom: 16rem solid transparent;
+        border-left: 28rem solid #1e5aa8;
+        border-right: 0;
+        margin: 104rem 14rem 0;
+      }
+    }
+  }
+}
+
+.service-flow-item-content {
+  @include g.mq() {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+
+.service-flow-item-title-wrap {
+  margin-top: 24rem;
+
+  @include g.mq() {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+
+.service-flow-item-title-en {
+  font-family: var(--font-family-en);
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.service-flow-item-title-ja {
+  font-size: 22rem;
+  margin-top: 4rem;
+  line-height: 1;
+
+  @include g.mq() {
+    font-size: 24rem;
+  }
+}
+
+.service-flow-item-text {
+  margin-top: 24rem;
+
+  span {
+    display: block;
+  }
+}
+
+.service-flow-btn-wrap {
+  margin-top: 64rem;
+}

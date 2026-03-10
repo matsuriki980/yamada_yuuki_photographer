@@ -1,0 +1,39 @@
+@use "../../global" as g;
+
+/*!
+page > about
+------------------------------
+*/
+
+.top-about {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56rem;
+
+  @include g.mq() {
+    grid-template-columns: 1fr 664rem;
+    align-items: center;
+    gap: 72rem;
+  }
+}
+
+.top-about-img {
+}
+
+.top-about-content {
+}
+
+.top-about-title {
+}
+
+.top-about-text {
+  margin-top: 36rem;
+
+  span {
+    display: block;
+  }
+}
+
+.top-about-btn {
+  margin-top: 36rem;
+}

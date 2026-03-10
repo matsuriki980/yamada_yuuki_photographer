@@ -1,0 +1,102 @@
+@use "../../global" as g;
+
+/*!
+page > top-service
+------------------------------
+*/
+
+.top-service {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include g.mq() {
+    grid-template-columns: 1fr 664rem;
+    gap: 56rem 72rem;
+  }
+}
+
+.top-service-title {
+  @include g.mq() {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+}
+
+.top-service-img-wrap {
+  height: 368rem;
+  position: relative;
+  margin-top: 48rem;
+
+  @include g.mq() {
+    height: 100%;
+    margin-top: 0;
+  }
+}
+
+.top-service-img {
+  display: block;
+  position: absolute;
+}
+
+.top-service-img--01 {
+  width: 240rem;
+  top: 0;
+  left: 0;
+
+  @include g.mq() {
+    width: 300rem;
+  }
+}
+
+.top-service-img--02 {
+  width: 280rem;
+  bottom: 0;
+  right: 0;
+
+  @include g.mq() {
+    width: 360rem;
+  }
+}
+
+.top-service-content {
+  margin-top: 56rem;
+
+  @include g.mq() {
+    margin-top: 0;
+  }
+}
+
+.top-service-copy {
+  font-size: 24rem;
+  line-height: 1.6;
+
+  span {
+    display: block;
+  }
+}
+
+.top-service-text {
+  &:not(:last-of-type) {
+    margin-bottom: 16rem;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.top-service-copy + .top-service-text {
+  margin-top: 24rem;
+
+  @include g.mq() {
+    margin-top: 36rem;
+  }
+}
+
+.top-service-btn {
+  margin-top: 48rem;
+
+  @include g.mq() {
+    margin-top: 36rem;
+  }
+}

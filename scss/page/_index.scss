@@ -1,5 +1,4 @@
 @use "top/top-kv";
-@use "top/top-concept";
 @use "top/top-service";
 @use "top/top-works";
 @use "top/top-about";
@@ -12,7 +11,7 @@
 @use "works/works";
 @use "works-detail/works-detail";
 @use "about/about-profile";
-@use "about/about-message";
 @use "about/about-career";
 @use "contact/contact-form";
 @use "contact-confirm/contact-confirm";
+@use "contact-thanks/contact-thanks";

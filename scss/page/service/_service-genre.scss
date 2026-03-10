@@ -1,0 +1,50 @@
+@use "../../global" as g;
+
+/*!
+page > service-genre
+------------------------------
+*/
+
+.service-genre {
+}
+
+.service-genre-head {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24rem;
+
+  @include g.mq() {
+    grid-template-columns: 1fr 849rem;
+  }
+}
+
+.service-reason-text {
+  span {
+    display: block;
+  }
+}
+
+.service-genre-list {
+  margin-top: 48rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64rem;
+
+  @include g.mq() {
+    grid-template-columns: repeat(3, 360rem);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 56rem;
+  }
+}
+
+.service-genre-item {
+}
+
+.service-genre-item-img {
+}
+
+.service-genre-item-title {
+  margin-top: 24rem;
+  line-height: 1;
+  font-size: 20rem;
+}

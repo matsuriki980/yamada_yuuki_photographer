@@ -1,12 +1,14 @@
 @use "../../global" as g;
 
 /*!
-page > contact-confirm
+page > contact-thanks
 ------------------------------
 */
 
-.contact-confirm-btn-wrap {
+.contact-thanks-btn-wrap {
   margin-top: 48rem;
+  text-align: center;
+  text-transform: capitalize;
 
   @include g.mq() {
     margin-top: 56rem;

@@ -1,0 +1,92 @@
+@use "../../global" as g;
+
+/*!
+page > service-reason
+------------------------------
+*/
+
+.service-reason-head {
+  text-align: center;
+}
+
+.service-reason-text {
+  margin-top: 24rem;
+
+  @include g.mq() {
+    margin-top: 36rem;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.service-reason-list {
+  margin-top: 48rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64rem;
+
+  @include g.mq() {
+    margin-top: 64rem;
+    gap: 80rem;
+  }
+}
+
+.service-reason-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24rem;
+
+  @include g.mq() {
+    grid-template-columns: 1fr 480rem;
+    gap: 80rem;
+    align-items: center;
+  }
+}
+
+.service-reason-item-content {
+  grid-row: 2/3;
+
+  @include g.mq() {
+    grid-row: 1/2;
+  }
+}
+
+.service-reason-item-title-en {
+  font-size: 16rem;
+  font-family: var(--font-family-en);
+  text-transform: capitalize;
+  color: var(--color-primary);
+}
+
+.service-reason-item-title-ja {
+  font-size: 22rem;
+  line-height: 1.5;
+}
+
+.service-reason-item-text {
+  margin-top: 12rem;
+
+  span {
+    display: block;
+  }
+}
+
+.service-reason-item-img {
+  grid-row: 1/2;
+}
+
+.service-reason-item--second {
+  @include g.mq() {
+    grid-template-columns: 480rem 1fr;
+
+    .service-reason-item-content {
+      grid-column: 2/3;
+    }
+
+    .service-reason-item-img {
+      grid-column: 1/2;
+    }
+  }
+}

@@ -1,0 +1,364 @@
+@use "../../global" as g;
+
+/*!
+page > service-plan-area
+------------------------------
+*/
+.service-plan-area-title {
+  text-align: center;
+}
+
+.service-plan {
+  margin-top: 48rem;
+}
+
+.service-plan-title {
+  text-align: center;
+}
+
+.service-plan-tab-btn--current {
+  color: var(--color-primary);
+}
+
+.service-plan-list {
+  margin-top: 40rem;
+  grid-template-columns: 1fr;
+  gap: 40rem;
+  display: none;
+
+  @include g.mq() {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+  }
+}
+
+.service-plan-list.is-active {
+  display: grid;
+}
+
+.service-plan-item {
+  background: var(--color-white);
+  box-shadow: 0px 7px 30px 0px rgba(31, 31, 31, 0.2);
+  padding: 20rem 16rem;
+}
+
+.service-plan-item-title {
+  font-size: 20rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 10rem;
+    aspect-ratio: 1/1;
+    background: var(--color-primary);
+    border-radius: 50%;
+  }
+}
+
+.service-plan-item-limit {
+  margin-top: 16rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.service-plan-item-price {
+  margin-top: 4rem;
+  line-height: 1;
+  display: block;
+}
+
+.service-plan-item-price-number {
+  font-size: 36rem;
+  font-family: var(--font-family-en);
+}
+
+.service-plan-item-price-unit {
+  font-size: 20rem;
+}
+
+.service-plan-item-detail {
+  margin-top: 16rem;
+}
+
+.service-plan-item-detail-btn {
+  font-size: 18rem;
+  line-height: 1;
+  padding-block: 14rem;
+  text-align: center;
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: var(--color-white);
+  cursor: pointer;
+  position: relative;
+  transition:
+    background 0.3s,
+    border 0.3s,
+    color 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: transparent;
+      border: 1px solid var(--color-font-base);
+      color: var(--color-font-base);
+
+      .service-plan-item-detail-btn-icon::before,
+      .service-plan-item-detail-btn-icon::after {
+        background: var(--color-font-base);
+      }
+    }
+  }
+}
+
+.service-plan-item-detail-btn-icon {
+  position: absolute;
+  width: 10rem;
+  aspect-ratio: 1/1;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16rem;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1rem;
+    background: var(--color-white);
+    position: absolute;
+    transition: background 0.3s;
+  }
+
+  &::before {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    top: 50%;
+    transform: rotate(90deg);
+    transition: transform 0.3s;
+  }
+}
+
+.service-plan-item-detail {
+  &[open] {
+    .service-plan-item-detail-btn-icon::after {
+      transform: rotate(0);
+    }
+  }
+}
+
+.service-plan-item-detail-group {
+  padding: 0 16rem 16rem;
+  background: var(--color-bg-extra-light);
+}
+
+.service-plan-item-detail-item {
+  display: grid;
+  grid-template-columns: 80rem 1fr;
+  gap: 24rem;
+  padding-block: 16rem;
+  border-bottom: 1px solid var(--color-border);
+  line-height: 1.7;
+}
+
+.service-plan-item-detail-label {
+  font-size: 14rem;
+}
+
+.service-plan-item-detail-text {
+  font-size: 14rem;
+  font-weight: 400;
+}
+
+.service-plan-item-detail-list-item {
+  display: flex;
+  align-items: flex-start;
+
+  &::before {
+    content: "・";
+    display: block;
+  }
+}
+
+.service-plan-supplement-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8rem;
+  margin-top: 40rem;
+}
+
+.service-plan-supplement-item {
+  color: var(--color-font-light);
+  display: flex;
+  align-items: flex-start;
+  gap: 8rem;
+  font-size: 14rem;
+
+  @include g.mq() {
+    font-size: 15rem;
+  }
+
+  &::before {
+    content: "※";
+    display: block;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.service-plan-cancellation {
+  margin-top: 40rem;
+}
+
+.service-plan-cancellation-title {
+  font-size: 22rem;
+  padding-bottom: 12rem;
+  line-height: 1;
+  border-bottom: 1px solid var(--color-border);
+
+  @include g.mq() {
+    font-size: 24rem;
+    padding-bottom: 16rem;
+  }
+}
+
+.service-plan-cancellation-content-wrap {
+  margin-top: 24rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40rem;
+
+  @include g.mq() {
+    display: grid;
+    grid-template-columns: repeat(2, 560rem);
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+.service-plan-cancellation-content-title {
+  font-size: 20rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 10rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: var(--color-primary);
+  }
+}
+
+.service-plan-cancellation-content-list {
+  margin-top: 16rem;
+}
+
+.service-plan-cancellation-content-item {
+  font-size: 14rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+
+  @include g.mq() {
+    font-size: 16rem;
+  }
+
+  &::before {
+    content: "・";
+    display: block;
+  }
+}
+
+.service-plan-cancellation-supplement-list {
+  margin-top: 16rem;
+}
+
+.service-plan-cancellation-supplement-item {
+  color: var(--color-font-light);
+  display: flex;
+  align-items: flex-start;
+  gap: 8rem;
+  font-size: 14rem;
+
+  @include g.mq() {
+    font-size: 15rem;
+  }
+
+  &::before {
+    content: "※";
+    display: block;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.service-area {
+  margin-top: 64rem;
+
+  @include g.mq() {
+    display: grid;
+    grid-template-columns: 1fr 810rem;
+    align-items: flex-start;
+  }
+}
+
+.service-area-text {
+  margin-top: 16rem;
+}
+
+// =========================
+// EC商品撮影 料金表
+
+.service-plan-item-text {
+  font-size: 14rem;
+  font-weight: 400;
+}
+
+.service-plan-item-detail-list--plan {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12rem;
+
+  .service-plan-item-detail-list-item {
+    &::before {
+      line-height: 1;
+    }
+  }
+}
+
+.service-plan-item-detail-label--plan {
+  line-height: 1;
+}
+
+.service-plan-item-detail-list-limit {
+  font-size: 14rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.service-plan-item-detail-list-price {
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 4rem;
+  display: block;
+}
+
+.service-plan-item-detail-list-number {
+  font-size: 24rem;
+  font-family: var(--font-family-en);
+}
+
+.service-plan-item-detail-list-unit {
+  font-size: 16rem;
+}

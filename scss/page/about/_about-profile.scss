@@ -1,0 +1,60 @@
+@use "../../global" as g;
+
+/*!
+page > about-profile
+------------------------------
+*/
+.about-profile {
+  @include g.mq() {
+    display: grid;
+    grid-template-columns: 1fr 640rem;
+    gap: 80rem;
+  }
+}
+
+.about-profile-content {
+  margin-top: 48rem;
+
+  @include g.mq() {
+    margin-top: 0;
+  }
+}
+
+.about-profile-name {
+  display: flex;
+  align-items: center;
+  gap: 16rem;
+  margin-top: 36rem;
+}
+
+.about-profile-name-ja {
+  font-size: 24rem;
+  line-height: 1;
+}
+
+.about-profile-name-en {
+  line-height: 1;
+  font-family: var(--font-family-en);
+  color: var(--color-primary);
+  text-transform: capitalize;
+}
+
+.about-profile-text {
+  margin-top: 16rem;
+
+  span {
+    display: block;
+  }
+}
+
+.about-profile-charge-list {
+  margin-top: 36rem;
+}
+
+.about-profile-charge-title {
+  font-size: 20rem;
+}
+
+.about-profile-charge-item {
+  font-size: 14rem;
+}

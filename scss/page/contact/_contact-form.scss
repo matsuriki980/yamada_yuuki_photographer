@@ -1,0 +1,84 @@
+@use "../../global" as g;
+
+/*!
+page > contact-form
+------------------------------
+*/
+
+.contact-form-item-label {
+  display: flex;
+  align-items: center;
+  gap: 16rem;
+}
+
+.contact-form-item-required {
+  font-size: 13rem;
+  background: var(--color-primary);
+  border-radius: 6rem;
+  color: var(--color-white);
+  padding-inline: 8rem;
+
+  @include g.mq() {
+    font-size: 14rem;
+  }
+}
+
+.contact-form-radio-wrap {
+  display: flex;
+  align-items: center;
+  gap: 36rem;
+  margin-top: 16rem;
+
+  @include g.mq() {
+    margin-top: 0;
+  }
+}
+
+.contact-form-radio {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  line-height: 1;
+
+  @media (any-hover: hover) {
+    cursor: pointer;
+  }
+
+  @include g.mq() {
+    font-size: 18rem;
+  }
+}
+
+.contact-form-radio-check {
+  width: 15rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: var(--color-bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// 選択中のラジオボタン
+.contact-form-radio-check:checked::before {
+  content: "";
+  display: block;
+  width: 9rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+.contact-form-item-text {
+  background: var(--color-bg-light);
+  padding: 12rem 16rem;
+}
+
+.contact-form-item-text--textarea {
+  field-sizing: content; // 文字数に合わせて高さを自動調整
+}
+
+.contact-form-btn {
+  text-align: center;
+  margin-top: 56rem;
+}

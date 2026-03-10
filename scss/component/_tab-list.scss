@@ -10,6 +10,7 @@ component > tab-list
   align-items: center;
   flex-wrap: wrap;
   gap: 24rem;
+  margin-top: 40rem;
 
   @include g.mq() {
     gap: 40rem;
@@ -33,6 +34,7 @@ component > tab-list
   color: var(--color-font-light);
 }
 
-.c-tab-link.active {
+.c-tab-link--current {
   color: var(--color-primary);
+  pointer-events: none;
 }

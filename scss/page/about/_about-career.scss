@@ -1,0 +1,91 @@
+@use "../../global" as g;
+
+/*!
+page > about-career
+------------------------------
+*/
+.about-career-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48rem;
+  margin-top: 48rem;
+
+  @include g.mq() {
+    grid-template-columns: 400rem 1fr;
+    gap: 80rem;
+  }
+}
+
+.about-career-img-wrap {
+  aspect-ratio: 1/1;
+  position: relative;
+
+  @include g.mq() {
+    align-self: center;
+  }
+}
+
+.about-career-img {
+  display: block;
+  position: absolute;
+}
+
+.about-career-img--01 {
+  width: 200rem;
+  top: 0;
+  left: 0;
+
+  @include g.mq() {
+    width: 240rem;
+  }
+}
+
+.about-career-img--02 {
+  width: 160rem;
+  top: 52rem;
+  right: 0;
+
+  @include g.mq() {
+    width: 180rem;
+  }
+}
+
+.about-career-img--03 {
+  width: 248rem;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include g.mq() {
+    width: 308rem;
+  }
+}
+
+.about-career-item {
+  padding-block: 16rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-career-item-year {
+  font-size: 24rem;
+  color: var(--color-primary);
+  font-family: var(--font-family-en);
+  line-height: 1;
+}
+
+.about-career-item-text {
+  margin-top: 4rem;
+
+  span {
+    display: block;
+  }
+}
+
+.about-career-item-year-ja {
+  font-size: 21rem;
+}
+
+.about-career-item-supplement {
+  font-size: 14rem;
+  color: var(--color-font-light);
+}

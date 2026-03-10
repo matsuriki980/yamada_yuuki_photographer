@@ -48,8 +48,11 @@ utility > utility
   background-size: 0 1px;
   background-repeat: no-repeat;
   transition: background-size 0.3s;
+  display: block;
 
   @include g.mq() {
+    padding-bottom: 4rem;
+
     @media (any-hover: hover) {
       &:hover {
         background-size: 100% 1px;

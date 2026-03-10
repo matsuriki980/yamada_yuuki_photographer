@@ -77,6 +77,12 @@ layout > page-kv
 .c-breadcrumb-list {
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 12rem;
+
+  @include g.mq() {
+    gap: 0;
+  }
 }
 
 .c-breadcrumb-item {

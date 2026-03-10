@@ -1,0 +1,39 @@
+@use "../global" as g;
+
+/*!
+component > contact-item
+------------------------------
+*/
+.c-contact-list {
+  margin-top: 48rem;
+}
+
+.c-contact-item {
+  padding-block: 16rem;
+  border-bottom: 1px solid var(--color-border);
+
+  @include g.mq() {
+    display: grid;
+    grid-template-columns: 280rem 1fr;
+    gap: 80rem;
+    align-items: center;
+    padding-block: 20rem;
+  }
+}
+
+.c-contact-item-label-text {
+  font-size: 18rem;
+
+  @include g.mq() {
+    font-size: 20rem;
+  }
+}
+
+.c-contact-item-text {
+  margin-top: 8rem;
+  width: 100%;
+
+  @include g.mq() {
+    margin-top: 0;
+  }
+}

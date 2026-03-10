@@ -94,7 +94,7 @@
     <main>
 
         <!------------------------ kv ------------------------>
-        <section class="c-page-kv u-pb">
+        <div class="c-page-kv">
             <div class="c-page-kv-inner">
 
                 <div class="c-page-kv-title-wrap">
@@ -105,8 +105,7 @@
                 <div class="c-page-kv-img">
                     <picture>
                         <source media="(min-width: 900px)" srcset="img/contact/contact-kv.jpg">
-                        <img src="img/contact/contact-kv-sp.jpg" width="343" height="250"
-                            alt="スマホとそれを操作する人物の手">
+                        <img src="img/contact/contact-kv-sp.jpg" width="343" height="250" alt="スマホとそれを操作する人物の手">
                     </picture>
                 </div>
 
@@ -121,70 +120,122 @@
                     </ol>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!------------------------ contact-cta ------------------------>
-        <section class="l-contact-cta l-container u-pb">
-            <div class="l-contact-cta-content">
-                <div class="c-title">
-                    <h2 class="c-title-ja">依頼・お問い合わせ</h2>
-                    <p class="c-title-en">contact</p>
+
+        <!------------------------ form ------------------------>
+        <div class="l-container-s u-ptb">
+
+            <div class="c-contact-head">
+
+                <div class="c-contact-title-wrap">
+                    <h2 class="c-title-s">
+                        お問い合わせフォーム
+                    </h2>
                 </div>
 
-                <p class="l-contact-cta-text">
-                    <span>サービスや依頼方法など、</span>
-                    <span>ご不明な点がございましたらお気軽にお問い合わせください。</span>
+                <ol class="c-contact-step-list">
+                    <li class="c-contact-step-item contact-step-item--current">
+                        <span class="c-contact-step-number ">01</span>
+                        <p class="c-contact-step-title">入力画面</p>
+                    </li>
+                    <li class="c-contact-step-item">
+                        <span class="c-contact-step-number ">02</span>
+                        <p class="c-contact-step-title">確認画面</p>
+                    </li>
+                    <li class="c-contact-step-item">
+                        <span class="c-contact-step-number ">03</span>
+                        <p class="c-contact-step-title">送信完了</p>
+                    </li>
+                </ol>
+
+                <p class="c-contact-text">
+                    下記の必要事項を入力の上、「確認画面へ」ボタンをクリックしてください。
                 </p>
             </div>
-            <div class="l-contact-cta-list">
-                <div class="l-contact-cta-item">
-                    <p class="l-contact-cta-title">電話での依頼・お問い合わせ</p>
 
-                    <address>
-                        <a href="tel:09046414374" class="l-contact-cta-tel-link u-link-hover">
-                            <p class="l-contact-cta-tel-number">090-4641-4374</p>
-                        </a>
-                        <p class="l-contact-cta-reception">受付時間：9:00 ~ 17:00</p>
-                    </address>
+            <form class="c-contact-list" id="contact-form">
+                <div class="c-contact-item contact-form-item">
+                    <p class="contact-form-item-label">
+                        <span class="c-contact-item-label-text">お問い合わせの種類</span>
+                        <span class="contact-form-item-required">必須</span>
+                    </p>
+
+                    <div class="contact-form-radio-wrap">
+                        <label class="contact-form-radio">
+                            <input type="radio" name="contactType" value="お問い合わせ" class="contact-form-radio-check"
+                                checked>
+                            <span class="contact-form-radio-text">お問い合わせ</span>
+                        </label>
+                        <label class="contact-form-radio">
+                            <input type="radio" name="contactType" value="ご依頼" class="contact-form-radio-check">
+                            <span class="contact-form-radio-text">ご依頼</span>
+                        </label>
+                    </div>
                 </div>
 
-                <div class="l-contact-cta-item">
-                    <p class="l-contact-cta-title">メールでの依頼・お問い合わせ</p>
-
-                    <nav aria-label="お問い合わせCTA">
-                        <a href="contact.html" class="l-contact-cta-mail-link">
-                            <span class="l-contact-cta-mail-text">依頼・お問い合わせする</span>
-                        </a>
-                    </nav>
+                <div class="c-contact-item contact-form-item">
+                    <label for="name" class="contact-form-item-label">
+                        <span class="c-contact-item-label-text">ご氏名</span>
+                        <span class="contact-form-item-required">必須</span>
+                    </label>
+                    <input type="text" name="name" id="name" placeholder="例：山田 太郎"
+                        class="contact-form-item-text c-contact-item-text" required>
                 </div>
-            </div>
-        </section>
+
+                <div class="c-contact-item contact-form-item">
+                    <label for="furigana" class="contact-form-item-label">
+                        <span class="c-contact-item-label-text">ふりがな</span>
+                        <span class="contact-form-item-required">必須</span>
+                    </label>
+                    <input type="text" name="furigana" id="furigana" placeholder="やまだ たろう"
+                        class="contact-form-item-text c-contact-item-text" required>
+                </div>
+
+                <div class="c-contact-item contact-form-item">
+                    <label for="email" class="contact-form-item-label">
+                        <span class="c-contact-item-label-text">メールアドレス</span>
+                        <span class="contact-form-item-required">必須</span>
+                    </label>
+                    <input type="email" name="email" id="email" placeholder="例：example@example.com"
+                        class="contact-form-item-text c-contact-item-text" required>
+                </div>
+
+                <div class="c-contact-item contact-form-item">
+                    <label for="tel" class="contact-form-item-label">
+                        <span class="c-contact-item-label-text">電話番号</span>
+                    </label>
+                    <input type="text" name="tel" id="tel" placeholder="例：090-1234-5678"
+                        class="contact-form-item-text c-contact-item-text">
+                </div>
+
+                <div class="c-contact-item contact-form-item">
+                    <label for="area" class="contact-form-item-label">
+                        <span class="c-contact-item-label-text">撮影エリア</span>
+                    </label>
+                    <input type="text" name="area" id="area" placeholder="例：大阪府 福島区"
+                        class="contact-form-item-text c-contact-item-text">
+                </div>
+
+                <div class="c-contact-item contact-form-item">
+                    <label for="message" class="contact-form-item-label">
+                        <span class="c-contact-item-label-text">お問い合わせ内容</span>
+                        <span class="contact-form-item-required">必須</span>
+                    </label>
+                    <textarea id="message" name="message" rows="6" placeholder="サービスについてのご不明な点や依頼の相談などを記入してください"
+                        class="c-contact-item-text contact-form-item-text contact-form-item-text--textarea"
+                        required></textarea>
+                </div>
+
+                <div class="contact-form-btn">
+                    <button type="submit" class="c-btn">
+                        入力内容を確認する
+                    </button>
+                </div>
+            </form>
+        </div>
 
     </main>
-
-    <!------------------------ header (下部追従ナビゲーション) ------------------------>
-    <aside class="l-header-bottom" style="display: none;">
-        <div class="l-header-bottom-content">
-
-            <p class="l-header-bottom-title">依頼・お問い合わせ</p>
-
-            <div class="l-header-bottom-cta-wrap">
-
-                <address class="l-header-bottom-tel-cta">
-                    <a href="tel:09046414374" class="l-header-bottom-tel-link u-link-hover">
-                        <p class="l-header-bottom-tel-number">090-4641-4374</p>
-                    </a>
-                    <p class="l-header-bottom-tel-reception-hours">受付時間：9:00 ~ 17:00</p>
-                </address>
-
-                <nav class="l-header-bottom-mail-cta" aria-label="お問い合わせCTA">
-                    <a href="contact.html" class="l-header-bottom-mail-link">
-                        <span class="l-header-bottom-mail-text">contact</span>
-                    </a>
-                </nav>
-            </div>
-        </div>
-    </aside>
 
     <!------------------------ footer ------------------------>
     <footer class="footer">
@@ -238,6 +289,8 @@
         <small class="copy-right">©Yamada yuuki 2026</small>
     </footer>
 
+    <!------------------------ js ------------------------>
+    <script src="js/vendor/gsap.min.js" defer></script>
     <script type="module" src="js/main.js"></script>
 </body>
 

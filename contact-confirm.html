@@ -94,11 +94,11 @@
     <main>
 
         <!------------------------ kv ------------------------>
-        <section class="c-page-kv u-pb">
+        <div class="c-page-kv">
             <div class="c-page-kv-inner">
 
                 <div class="c-page-kv-title-wrap">
-                    <h1 class="c-page-kv-title-ja">お問い合わせ</h1>
+                    <p class="c-page-kv-title-ja">お問い合わせ</p>
                     <p class="c-page-kv-title-en">contact</p>
                 </div>
 
@@ -114,19 +114,111 @@
                         <li class="c-breadcrumb-item">
                             <a href="index.html">トップ</a>
                         </li>
-                        <li class="c-breadcrumb-item">
-                            <a href="index.html">依頼・お問い合わせ</a>
-                        </li>
                         <li class="c-breadcrumb-item c-breadcrumb-item--current">
-                            入力確認
+                            依頼・お問い合わせ
                         </li>
                     </ol>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------ contact-confirm ------------------------>
+        <section class="contact-confirm u-pt l-container-s">
+            <div class="c-contact-head">
+
+                <div class="c-contact-title-wrap">
+                    <h1 class="c-title-s">
+                        入力確認画面
+                    </h1>
+                </div>
+
+                <ol class="c-contact-step-list">
+                    <li class="c-contact-step-item">
+                        <span class="c-contact-step-number ">01</span>
+                        <p class="c-contact-step-title">入力画面</p>
+                    </li>
+                    <li class="c-contact-step-item contact-step-item--current">
+                        <span class="c-contact-step-number ">02</span>
+                        <p class="c-contact-step-title">確認画面</p>
+                    </li>
+                    <li class="c-contact-step-item">
+                        <span class="c-contact-step-number ">03</span>
+                        <p class="c-contact-step-title">送信完了</p>
+                    </li>
+                </ol>
+
+                <p class="c-contact-text">
+                    <span>下記の入力内容を確認の上、「入力内容を送信する」ボタンをクリックしてください。</span>
+                    <span>通常営業日3日以内にご返信させていただきます。</span>
+                </p>
+            </div>
+
+            <div class="contact-confirm-list c-contact-list">
+
+                <div class="c-contact-item">
+                    <p class="c-contact-item-label">
+                        <span class="c-contact-item-label-text">お問い合わせの種類</span>
+                    </p>
+                    <p class="c-contact-item-text" data-key="contactType"></p>
+                </div>
+
+                <div class="c-contact-item">
+                    <p class="c-contact-item-label">
+                        <span class="c-contact-item-label-text">ご氏名</span>
+                    </p>
+                    <p class="c-contact-item-text" data-key="name"></p>
+                </div>
+
+                <div class="c-contact-item">
+                    <p class="c-contact-item-label">
+                        <span class="c-contact-item-label-text">ふりがな</span>
+                    </p>
+                    <p class="c-contact-item-text" data-key="furigana"></p>
+                </div>
+
+                <div class="c-contact-item">
+                    <p class="c-contact-item-label">
+                        <span class="c-contact-item-label-text">メールアドレス</span>
+                    </p>
+                    <p class="c-contact-item-text" data-key="email"></p>
+                </div>
+
+                <div class="c-contact-item">
+                    <p class="c-contact-item-label">
+                        <span class="c-contact-item-label-text">電話番号</span>
+                    </p>
+                    <p class="c-contact-item-text" data-key="tel"></p>
+                </div>
+
+                <div class="c-contact-item">
+                    <p class="c-contact-item-label">
+                        <span class="c-contact-item-label-text">撮影エリア</span>
+                    </p>
+                    <p class="c-contact-item-text" data-key="area"></p>
+                </div>
+
+                <div class="c-contact-item">
+                    <p class="c-contact-item-label">
+                        <span class="c-contact-item-label-text">お問い合わせ内容</span>
+                    </p>
+                    <p class="c-contact-item-text" data-key="message"></p>
+                </div>
+            </div>
+
+            <div class="contact-confirm-btn-wrap c-btn-group-wrap">
+                <div class="c-btn-group">
+                    <button type="button" class="c-btn" id="submit-btn">
+                        入力内容を送信する
+                    </button>
+                    <button type="button" class="c-btn c-btn--back" id="back-btn">
+                        入力内容を訂正する
+                    </button>
                 </div>
             </div>
         </section>
 
         <!------------------------ contact-cta ------------------------>
-        <section class="l-contact-cta l-container u-pb">
+        <section class="l-contact-cta l-container u-ptb">
             <div class="l-contact-cta-content">
                 <div class="c-title">
                     <h2 class="c-title-ja">依頼・お問い合わせ</h2>
@@ -240,6 +332,9 @@
         <small class="copy-right">©Yamada yuuki 2026</small>
     </footer>
 
+    <!------------------------ js ------------------------>
+    <script src="js/vendor/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
     <script type="module" src="js/main.js"></script>
 </body>
 

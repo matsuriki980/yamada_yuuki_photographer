@@ -19,6 +19,7 @@
         rel="stylesheet">
 
     <!-- css -->
+    <link rel="stylesheet" href="css/vendor/splide-core.min.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- noindex -->
@@ -28,17 +29,16 @@
 <body>
 
     <!------------------------ header ------------------------>
-    <header class="l-header" style="display: none;">
+    <header class="l-header">
         <h1 class="l-header-logo u-link-hover"><a href="index.html">yamada yuuki</a></h1>
 
         <dialog class="l-header-menu js-header-menu" aria-label="ナビメニュー">
 
+            <button class="l-header-menu-close-button js-header-menu-close-button" aria-label="ハンバーガーボタン">
+                <img src="img/icon-close.svg" width="36" height="36" alt="閉じるボタン">
+            </button>
+
             <div class="l-header-menu-content">
-
-                <button class="l-header-menu-close-button js-header-menu-close-button" aria-label="ハンバーガーボタン">
-                    <img src="img/icon-close.svg" width="36" height="36" alt="閉じるボタン">
-                </button>
-
                 <nav class="l-header-menu-nav" aria-label="ヘッダーナビゲーション">
                     <ul class="l-header-menu-list">
                         <li class="l-header-menu-item l-header-item--top">
@@ -91,14 +91,47 @@
         </button>
     </header>
 
+    <!------------------------ header (下部追従ナビゲーション) ------------------------>
+    <aside class="l-header-bottom js-header-bottom">
+        <div class="l-header-bottom-content">
+
+            <p class="l-header-bottom-title">依頼・お問い合わせ</p>
+
+            <div class="l-header-bottom-cta-wrap">
+
+                <address class="l-header-bottom-tel-cta">
+                    <a href="tel:09046414374" class="l-header-bottom-tel-link u-link-hover">
+                        <p class="l-header-bottom-tel-number">090-4641-4374</p>
+                    </a>
+                    <p class="l-header-bottom-tel-reception-hours">受付時間：9:00 ~ 17:00</p>
+                </address>
+
+                <nav class="l-header-bottom-mail-cta" aria-label="お問い合わせCTA">
+                    <a href="contact.html" class="l-header-bottom-mail-link">
+                        <span class="l-header-bottom-mail-text">contact</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </aside>
+
     <main>
 
-        <section class="top-kv">
-            
+        <!------------------------ top-kv ------------------------>
+        <section class="top-kv js-header--bottom-trigger">
+            <div class="top-kv-img"></div>
+
+            <div class="top-kv-title">
+                <p class="top-kv-title-en">
+                    <span>Photography</span>
+                    <span>Shooting Service</span>
+                </p>
+                <h2 class="top-kv-title-ja">写真・動画制作</h2>
+            </div>
         </section>
 
         <!------------------------ concept ------------------------>
-        <section class="concept u-ptb">
+        <section class="concept u-pt">
             <div class="l-section-statement l-container">
 
                 <div class="c-title l-section-statement-title">
@@ -137,8 +170,179 @@
             </div>
         </section>
 
+        <!------------------------ service ------------------------>
+        <section class="top-service l-container u-pt">
+
+            <div class="c-title top-service-title">
+                <h2 class="c-title-ja">サービス</h2>
+                <p class="c-title-en">service</p>
+            </div>
+
+            <div class="top-service-img-wrap">
+                <span class="top-service-img top-service-img--01">
+                    <img src="img/top/top-service01.jpg" width="240" height="160" alt="パソコンを手に綺麗なオフィスで打ち合わせを行う4人の人物">
+                </span>
+                <span class="top-service-img top-service-img--02">
+                    <img src="img/top/top-service02.jpg" width="280" height="185" alt="和気あいあいと笑顔で背中を合わせる６人の人物">
+                </span>
+            </div>
+
+            <div class="top-service-content">
+                <p class="top-service-copy">
+                    <span>お客様の”喜び”を生み出す、</span>
+                    <span>写真・動画撮影サービス</span>
+                </p>
+
+                <p class="top-service-text">
+                    企業から個人まで、規模やニーズに合わせた撮影サービスを提供しています。
+                </p>
+
+                <p class="top-service-text">
+                    「企業の魅力を伝えるポートレートがほしい」「印象的なEC商品の宣材写真を撮影したい」などのビジネス目的や、
+                    「家族との時間を一生の宝物として残したい」といったプライベート目的の撮影にも、幅広く対応しています。
+                </p>
+
+                <p class="top-service-text">
+                    <span>どの撮影でも大切にしているのは、写真を通して【喜び】を届けること。</span>
+                    <span>お客様にとって、笑顔があふれる最高の撮影時間と、心に残る【喜びの一枚】をお届けいたします。</span>
+                </p>
+
+                <div class="top-service-btn">
+                    <a href="service.html" class="c-btn">
+                        サービスを見る
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!------------------------ works ------------------------>
+        <section class="top-works u-pt">
+            <div class="top-works-head l-container">
+                <div class="c-title top-works-title">
+                    <h2 class="c-title-ja">撮影実績</h2>
+                    <p class="c-title-en">works</p>
+                </div>
+
+                <div class="pagination">
+                    <button class="pagination-btn js-pagination-btn--prev pagination-btn--prev "
+                        aria-label="ぺージネイション（戻る）"></button>
+                    <button class="pagination-btn js-pagination-btn--next pagination-btn--next"
+                        aria-label="ぺージネイション（進む）"></button>
+                </div>
+
+            </div>
+
+            <div class="top-works-slider js-top-works-slider splide">
+                <div class="top-works-list splide__track">
+                    <div class="splide__list">
+                        <article class="splide__slide top-works-item">
+                            <a href="works-detail.html">
+                                <div class=" top-works-item-img">
+                                    <img src="img/top/top-works-company.jpg" alt="日差しに照らされる、オフィスに置かれたパソコン" width="230"
+                                        height="160" decoding="async">
+                                </div>
+
+                                <p class=" top-works-item-category">企業撮影</p>
+                                <h3 class=" top-works-item-title">ホームページ用 ビジネスポートレート撮影</h3>
+                            </a>
+                        </article>
+
+                        <article class="splide__slide top-works-item">
+                            <a href="works-detail.html">
+                                <div class=" top-works-item-img">
+                                    <img src="img/top/top-works-web.jpg" alt="水につけられた化粧品" width="230" height="160"
+                                        decoding="async">
+                                </div>
+
+                                <p class=" top-works-item-category">web商品撮影</p>
+                                <h3 class=" top-works-item-title">ECサイト掲載用 商品撮影（EC・広告用）</h3>
+                            </a>
+                        </article>
+
+                        <article class="splide__slide top-works-item">
+                            <a href="works-detail.html">
+                                <div class=" top-works-item-img">
+                                    <img src="img/top/top-works-weding.jpg" alt="芝生の上で楽しそうにスキップをする男女" width="230"
+                                        height="160" decoding="async">
+                                </div>
+
+                                <p class=" top-works-item-category">ウエディング撮影</p>
+                                <h3 class=" top-works-item-title">ウエディング 前撮り撮影</h3>
+                            </a>
+                        </article>
+
+                        <article class="splide__slide top-works-item">
+                            <a href="works-detail.html">
+                                <div class=" top-works-item-img">
+                                    <img src="img/top/top-works-model.jpg" alt="暗い夜の中、クールにポーズをとる女性" width="230"
+                                        height="160" decoding="async">
+                                </div>
+
+                                <p class=" top-works-item-category">モデル撮影</p>
+                                <h3 class=" top-works-item-title">プロモーション用 モデル撮影</h3>
+                            </a>
+                        </article>
+
+                        <article class="splide__slide top-works-item">
+                            <a href="works-detail.html">
+                                <div class=" top-works-item-img">
+                                    <img src="img/top/top-works-family.jpg" alt="笑顔で子供を抱き上げる夫婦" width="230" height="160"
+                                        decoding="async">
+                                </div>
+
+                                <p class=" top-works-item-category">家族撮影</p>
+                                <h3 class=" top-works-item-title">記念日・ライフイベント撮影</h3>
+                            </a>
+                        </article>
+
+                        <article class="splide__slide top-works-item">
+                            <a href="works-detail.html">
+                                <div class=" top-works-item-img">
+                                    <img src="img/top/top-works-cook.jpg" alt="黒いお皿に盛りつけられた辛味料理" width="230"
+                                        height="160" decoding="async">
+                                </div>
+
+                                <p class=" top-works-item-category">料理撮影</p>
+                                <h3 class=" top-works-item-title">飲食店 メニュー用撮影</h3>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <div class="top-works-btn">
+                <a href="works.html" class="c-btn">
+                    実績一覧を見る
+                </a>
+            </div>
+        </section>
+
+        <!------------------------ about ------------------------>
+        <section class="top-about l-container u-pt">
+            <div class="top-about-img">
+                <img src="img/top/top-about.jpg" width="343" height="343" alt="カメラを構える男性">
+            </div>
+            <div class="top-about-content">
+                <div class="c-title top-about-title">
+                    <h2 class="c-title-ja">私について</h2>
+                    <p class="c-title-en">about</p>
+                </div>
+
+                <p class="top-about-text">
+                    <span>アパレルEC会社で商品・モデル撮影を経験し、「売る・使われる写真」を意識した企業向け撮影を担当。</span>
+                    <span>現在はコーポレート、商品、ウェディング、家族写真まで、目的に応じた幅広い撮影を行っています。</span>
+                </p>
+
+                <div class="top-about-btn">
+                    <a href="about.html" class="c-btn">
+                        私について知る
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!------------------------ instagram ------------------------>
-        <section class="l-instagram l-container u-pb">
+        <section class="l-instagram l-container u-pt">
 
             <div class="l-instagram-img-wrap">
                 <span class="l-instagram-img l-instagram-img--01">
@@ -171,7 +375,7 @@
         </section>
 
         <!------------------------ contact-cta ------------------------>
-        <section class="l-contact-cta l-container u-pb">
+        <section class="l-contact-cta l-container u-ptb">
             <div class="l-contact-cta-content">
                 <div class="c-title">
                     <h2 class="c-title-ja">依頼・お問い合わせ</h2>
@@ -209,30 +413,6 @@
 
 
     </main>
-
-    <!------------------------ header (下部追従ナビゲーション) ------------------------>
-    <aside class="l-header-bottom" style="display: none;">
-        <div class="l-header-bottom-content">
-
-            <p class="l-header-bottom-title">依頼・お問い合わせ</p>
-
-            <div class="l-header-bottom-cta-wrap">
-
-                <address class="l-header-bottom-tel-cta">
-                    <a href="tel:09046414374" class="l-header-bottom-tel-link u-link-hover">
-                        <p class="l-header-bottom-tel-number">090-4641-4374</p>
-                    </a>
-                    <p class="l-header-bottom-tel-reception-hours">受付時間：9:00 ~ 17:00</p>
-                </address>
-
-                <nav class="l-header-bottom-mail-cta" aria-label="お問い合わせCTA">
-                    <a href="contact.html" class="l-header-bottom-mail-link">
-                        <span class="l-header-bottom-mail-text">contact</span>
-                    </a>
-                </nav>
-            </div>
-        </div>
-    </aside>
 
     <!------------------------ footer ------------------------>
 
@@ -287,6 +467,10 @@
         <small class="copy-right">©Yamada yuuki 2026</small>
     </footer>
 
+    <!------------------------ js ------------------------>
+    <script src="js/vendor/gsap.min.js" defer></script>
+    <script src="js/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="js/vendor/splide.min.js" defer></script>
     <script type="module" src="js/main.js"></script>
 </body>
 

@@ -1,0 +1,46 @@
+@use "../../global" as g;
+
+/*!
+page > works-detail
+------------------------------
+*/
+.works-detail-img {
+  margin-top: 24rem;
+
+  @include g.mq() {
+    margin-top: 40rem;
+  }
+}
+
+.works-detail-coategory {
+  color: var(--color-primary);
+
+  @include g.mq() {
+    font-size: 18rem;
+  }
+}
+
+.works-detail-title {
+  font-size: 22rem;
+  line-height: 1.45;
+
+  @include g.mq() {
+    font-size: 32rem;
+  }
+}
+
+.works-detail-text {
+  margin-top: 24rem;
+
+  span {
+    display: block;
+  }
+}
+
+.works-detail-btn-wrap {
+  margin-top: 48rem;
+
+  @include g.mq() {
+    margin-top: 40rem;
+  }
+}
