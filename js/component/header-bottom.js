@@ -7,6 +7,7 @@ export const initHeaderBottom = () => {
 
   if (!headerBottom) return;
 
+  // 表示処理
   const showHeaderBottomOnScroll = () => {
     gsap.to(headerBottom, {
       autoAlpha: 1,
@@ -15,6 +16,7 @@ export const initHeaderBottom = () => {
     });
   };
 
+  // 非表示処理
   const hideHeaderBottomOnScroll = () => {
     gsap.to(headerBottom, {
       autoAlpha: 0,
@@ -23,6 +25,7 @@ export const initHeaderBottom = () => {
     });
   };
 
+  // fvの下端を基準に実行
   ScrollTrigger.create({
     trigger: triggerElement,
     // markers: true,

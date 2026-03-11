@@ -8,6 +8,7 @@ export const initializeHamburgerMenu = () => {
 
   if (!menu || !openBtn || !closeBtn) return;
 
+  // 開くときの処理
   const openMenu = () => {
     menu.showModal();
     document.body.style.overflow = "hidden";
@@ -25,6 +26,7 @@ export const initializeHamburgerMenu = () => {
     );
   };
 
+  // 閉じるときの処理
   const closeMenu = () => {
     gsap.to(menu, {
       opacity: 0,
@@ -45,6 +47,7 @@ export const initializeHamburgerMenu = () => {
     closeMenu();
   });
 
+  // SPのみ描画
   window.addEventListener("resize", () => {
     if (window.innerWidth >= 900) {
       menu.close();

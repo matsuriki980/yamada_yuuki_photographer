@@ -2245,6 +2245,7 @@ page > service-plan-area
 
 .service-plan-item-detail {
   margin-top: 16rem;
+  overflow: hidden;
 }
 
 .service-plan-item-detail-btn {
@@ -2302,9 +2303,13 @@ page > service-plan-area
   transform: rotate(0);
 }
 
+.service-plan-item-detail-group-wrap {
+  background: var(--color-bg-extra-light);
+  height: 0;
+}
+
 .service-plan-item-detail-group {
   padding: 0 16rem 16rem;
-  background: var(--color-bg-extra-light);
 }
 
 .service-plan-item-detail-item {

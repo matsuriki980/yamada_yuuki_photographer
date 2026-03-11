@@ -5,6 +5,7 @@
 import { sendContactEmail } from "./email.js";
 
 export const initContactConfirm = () => {
+  // フォーム入力値を反映する
   const dataReflection = () => {
     const raw = sessionStorage.getItem("contactFormData");
 
@@ -25,6 +26,7 @@ export const initContactConfirm = () => {
     });
   };
 
+  // ボタンの遷移先を設定する
   const movePage = () => {
     const backButton = document.querySelector("#back-btn");
     const submitButton = document.querySelector("#submit-btn");
